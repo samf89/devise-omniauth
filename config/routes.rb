@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :products
 
   root 'pages#index'
+  get '/secret', to: 'pages#secret'
 
 end
