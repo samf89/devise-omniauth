@@ -9,6 +9,9 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = { from: 'no-reply@devisetutorial.com' }
+  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3033 }
 
   config.active_support.deprecation = :log
 
@@ -20,6 +23,5 @@ Rails.application.configure do
 
   config.assets.raise_runtime_errors = true
 
-  config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3033 }
 
 end
