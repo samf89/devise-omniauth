@@ -30,7 +30,7 @@ Devise.setup do |config|
   config.unlock_in = 1.hour
   config.last_attempt_warning = true 
 
-  config.confirm_with = 3.days
+  config.confirm_within = 3.days
   config.reconfirmable = true
 
 end
