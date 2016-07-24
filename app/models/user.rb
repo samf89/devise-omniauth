@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
-         :confirmable, :lockable,
-         :omniauthable, omniauthable_provides: [:facebook]
+         :lockable,
+         :omniauthable
 
   validates_presence_of :name
 
@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
 
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
+  end
+
+  def display_name
+    self.name || self.email
   end
 
 end
