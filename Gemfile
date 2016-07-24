@@ -21,6 +21,7 @@ group :development, :test do
   gem 'devise'
   gem 'omniauth'
   gem 'omniauth-digitalocean'
+  gem 'omniauth-facebook'
 end
 
 group :development do
